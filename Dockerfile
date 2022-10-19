@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 RUN apt-get -qq update \
-    && apt-get -qq install -y --no-install-recommends ca-certificates curl zsh git wget fonts-powerline language-pack-en && update-locale && chsh -s /bin/zsh
+    && apt-get -qq install -y --no-install-recommends ca-certificates curl zsh git wget fonts-powerline language-pack-en ssh gcc && update-locale && chsh -s /bin/zsh
 RUN mkdir /root/go && wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh \
     && git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions \
     && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
