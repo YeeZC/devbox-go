@@ -6,7 +6,7 @@ plugins=(
 	zsh-syntax-highlighting	
 )
 source $ZSH/oh-my-zsh.sh
-export GOPATH=/workspace           
+export GOPATH=/root/go           
 export PATH=$PATH:$GOPATH/bin
 export GO111MODULE=on
 export GOPROXY=https://goproxy.cn,direct
